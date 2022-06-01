@@ -1,0 +1,838 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.8.1 on win32)" generated="20220601 23:48:24.020" rpa="false" schemaversion="3">
+<suite id="s1" name="Tests" source="C:\Users\Artem Kozlov\PycharmProjects\RobotAPI\Tests">
+<suite id="s1-s1" name="tests APIDocumentation" source="C:\Users\Artem Kozlov\PycharmProjects\RobotAPI\Tests\tests_APIDocumentation.robot">
+<kw name="Connect to API Documentation" library="keywords" type="SETUP">
+<kw name="Create Session" library="RequestsLibrary">
+<arg>NewSession</arg>
+<arg>${API_Documentation}</arg>
+<arg>headers=${headers}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20220601 23:48:24.519" level="INFO">Creating Session using : alias=NewSession, url=https://robot-framework.readthedocs.io/, headers={'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.82 Safari/537.36', 'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20220601 23:48:24.519" endtime="20220601 23:48:24.519"/>
+</kw>
+<status status="PASS" starttime="20220601 23:48:24.519" endtime="20220601 23:48:24.519"/>
+</kw>
+<test id="s1-s1-t1" name="Get API Documentation Page" line="8">
+<kw name="Verify that API Documentation Page opens" library="keywords">
+<kw name="Get status code" library="keywords">
+<var>${status_code}</var>
+<if>
+<branch type="IF" condition="'${response}' == 'None'">
+<kw name="GET On Session" library="RequestsLibrary">
+<var>${response}</var>
+<arg>NewSession</arg>
+<arg>/</arg>
+<arg>headers=${headers}</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<msg timestamp="20220601 23:48:25.065" level="INFO">GET Request : url=https://robot-framework.readthedocs.io/ (redirected) 
+ path_url=/ 
+ headers={'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.82 Safari/537.36', 'Accept-Encoding': 'gzip, deflate', 'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg timestamp="20220601 23:48:25.065" level="INFO">GET Response : url=https://robot-framework.readthedocs.io/en/stable/ 
+ status=200, reason=OK 
+ headers={'Date': 'Wed, 01 Jun 2022 16:48:24 GMT', 'Content-Type': 'text/html', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Vary': 'Accept-Encoding', 'x-amz-id-2': 'ydSGJYIJmgesRUdM4goUDG8d3dMnpSMs92q2ap35ftDCW4daXNAsPNsbl6tqfqiqTmRT3DYNr1w=', 'x-amz-request-id': 'R4FEJXC39DJTSD5T', 'Last-Modified': 'Mon, 16 May 2022 08:02:54 GMT', 'ETag': 'W/"a05c7d8b0649f08e8f5185903ecbb204"', 'X-Served': 'Nginx-Proxito-Sendfile', 'X-Backend': 'web-i-048f836b64599ac46', 'X-RTD-Project': 'robot-framework', 'X-RTD-Version': 'stable', 'X-RTD-Path': '/proxito/html/robot-framework/stable/index.html', 'X-RTD-Domain': 'robot-framework.readthedocs.io', 'X-RTD-Version-Method': 'path', 'X-RTD-Project-Method': 'subdomain', 'Referrer-Policy': 'no-referrer-when-downgrade', 'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload', 'Content-Encoding': 'gzip', 'CF-Cache-Status': 'HIT', 'Age': '5829', 'Expires': 'Thu, 02 Jun 2022 16:48:24 GMT', 'Cache-Control': 'public, max-age=86400', 'Expect-CT': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"', 'Server': 'cloudflare', 'CF-RAY': '71496fca3c1f9d73-DME', 'alt-svc': 'h3=":443"; ma=86400, h3-29=":443"; ma=86400'} 
+ body=
+
+&lt;!DOCTYPE html&gt;
+&lt;!--[if IE 8]&gt;&lt;html class="no-js lt-ie9" lang="en" &gt; &lt;![endif]--&gt;
+&lt;!--[if gt IE 8]&gt;&lt;!--&gt; &lt;html class="no-js" lang="en" &gt; &lt;!--&lt;![endif]--&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  
+  &lt;title&gt;Robot Framework API documentation &amp;mdash; Robot Framework 5.0.1 documentation&lt;/title&gt;
+  
+
+  
+  
+  
+  
+
+  
+  &lt;script type="text/javascript" src="_static/js/modernizr.min.js"&gt;&lt;/script&gt;
+  
+    
+      &lt;script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"&gt;&lt;/script&gt;
+        &lt;script type="text/javascript" src="_static/jquery.js"&gt;&lt;/script&gt;
+        &lt;script type="text/javascript" src="_static/underscore.js"&gt;&lt;/script&gt;
+        &lt;script type="text/javascript" src="_static/doctools.js"&gt;&lt;/script&gt;
+        &lt;script type="text/javascript" src="_static/language_data.js"&gt;&lt;/script&gt;
+        &lt;script async="async" type="text/javascript" src="https://assets.readthedocs.org/static/javascript/readthedocs-doc-embed.js"&gt;&lt;/script&gt;
+    
+    &lt;script type="text/javascript" src="_static/js/theme.js"&gt;&lt;/script&gt;
+
+    
+
+  
+  &lt;link rel="stylesheet" href="_static/css/theme.css" type="text/css" /&gt;
+  &lt;link rel="stylesheet" href="_static/pygments.css" type="text/css" /&gt;
+    &lt;link rel="index" title="Index" href="genindex.html" /&gt;
+    &lt;link rel="search" title="Search" href="search.html" /&gt;
+    &lt;link rel="next" title="robot package" href="autodoc/robot.html" /&gt; 
+
+&lt;!-- RTD Extra Head --&gt;
+
+&lt;link rel="stylesheet" href="https://assets.readthedocs.org/static/css/readthedocs-doc-embed.css" type="text/css" /&gt;
+
+&lt;script type="application/json" id="READTHEDOCS_DATA"&gt;{"ad_free": false, "api_host": "https://readthedocs.org", "build_date": "2022-05-16T08:00:35Z", "builder": "sphinx", "canonical_url": null, "commit": "41513d0c", "docroot": "/doc/api/", "features": {"docsearch_disabled": false}, "global_analytics_code": "UA-17997319-1", "language": "en", "page": "index", "programming_language": "py", "project": "robot-framework", "proxied_api_host": "/_", "source_suffix": ".rst", "subprojects": {}, "theme": "sphinx_rtd_theme", "user_analytics_code": "", "version": "stable"}&lt;/script&gt;
+
+&lt;!--
+Using this variable directly instead of using `JSON.parse` is deprecated.
+The READTHEDOCS_DATA global variable will be removed in the future.
+--&gt;
+&lt;script type="text/javascript"&gt;
+READTHEDOCS_DATA = JSON.parse(document.getElementById('READTHEDOCS_DATA').innerHTML);
+&lt;/script&gt;
+
+&lt;script type="text/javascript" src="https://assets.readthedocs.org/static/javascript/readthedocs-analytics.js" async="async"&gt;&lt;/script&gt;
+
+&lt;!-- end RTD &lt;extrahead&gt; --&gt;
+&lt;/head&gt;
+
+&lt;body class="wy-body-for-nav"&gt;
+
+   
+  &lt;div class="wy-grid-for-nav"&gt;
+    
+    &lt;nav data-toggle="wy-nav-shift" class="wy-nav-side"&gt;
+      &lt;div class="wy-side-scroll"&gt;
+        &lt;div class="wy-side-nav-search" &gt;
+          
+
+          
+            &lt;a href="#" class="icon icon-home"&gt; Robot Framework
+          
+
+          
+          &lt;/a&gt;
+
+          
+            
+            
+            
+              &lt;div class="version"&gt;
+                stable
+              &lt;/div&gt;
+            
+          
+
+          
+&lt;div role="search"&gt;
+  &lt;form id="rtd-search-form" class="wy-form" action="search.html" method="get"&gt;
+    &lt;input type="text" name="q" placeholder="Search docs" /&gt;
+    &lt;input type="hidden" name="check_keywords" value="yes" /&gt;
+    &lt;input type="hidden" name="area" value="default" /&gt;
+  &lt;/form&gt;
+&lt;/div&gt;
+
+          
+        &lt;/div&gt;
+
+        &lt;div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation"&gt;
+          
+            
+            
+              
+            
+            
+              &lt;ul&gt;
+&lt;li class="toctree-l1"&gt;&lt;a class="reference internal" href="autodoc/robot.html"&gt;robot package&lt;/a&gt;&lt;/li&gt;
+&lt;li class="toctree-l1"&gt;&lt;a class="reference internal" href="autodoc/robot.api.html"&gt;robot.api package&lt;/a&gt;&lt;/li&gt;
+&lt;li class="toctree-l1"&gt;&lt;a class="reference internal" href="autodoc/robot.conf.html"&gt;robot.conf package&lt;/a&gt;&lt;/li&gt;
+&lt;li class="toctree-l1"&gt;&lt;a class="reference internal" href="autodoc/robot.htmldata.html"&gt;robot.htmldata package&lt;/a&gt;&lt;/li&gt;
+&lt;li class="toctree-l1"&gt;&lt;a class="reference internal" href="autodoc/robot.libdocpkg.html"&gt;robot.libdocpkg package&lt;/a&gt;&lt;/li&gt;
+&lt;li class="toctree-l1"&gt;&lt;a class="reference internal" href="autodoc/robot.libraries.html"&gt;robot.libraries package&lt;/a&gt;&lt;/li&gt;
+&lt;li class="toctree-l1"&gt;&lt;a class="reference internal" href="autodoc/robot.model.html"&gt;robot.model package&lt;/a&gt;&lt;/li&gt;
+&lt;li class="toctree-l1"&gt;&lt;a class="reference internal" href="autodoc/robot.output.html"&gt;robot.output package&lt;/a&gt;&lt;/li&gt;
+&lt;li class="toctree-l1"&gt;&lt;a class="reference internal" href="autodoc/robot.parsing.html"&gt;robot.parsing package&lt;/a&gt;&lt;/li&gt;
+&lt;li class="toctree-l1"&gt;&lt;a class="reference internal" href="autodoc/robot.reporting.html"&gt;robot.reporting package&lt;/a&gt;&lt;/li&gt;
+&lt;li class="toctree-l1"&gt;&lt;a class="reference internal" href="autodoc/robot.result.html"&gt;robot.result package&lt;/a&gt;&lt;/li&gt;
+&lt;li class="toctree-l1"&gt;&lt;a class="reference internal" href="autodoc/robot.running.html"&gt;robot.running package&lt;/a&gt;&lt;/li&gt;
+&lt;li class="toctree-l1"&gt;&lt;a class="reference internal" href="autodoc/robot.utils.html"&gt;robot.utils package&lt;/a&gt;&lt;/li&gt;
+&lt;li class="toctree-l1"&gt;&lt;a class="reference internal" href="autodoc/robot.variables.html"&gt;robot.variables package&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+            
+          
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/nav&gt;
+
+    &lt;section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"&gt;
+
+      
+      &lt;nav class="wy-nav-top" aria-label="top navigation"&gt;
+        
+          &lt;i data-toggle="wy-nav-top" class="fa fa-bars"&gt;&lt;/i&gt;
+          &lt;a href="#"&gt;Robot Framework&lt;/a&gt;
+        
+      &lt;/nav&gt;
+
+
+      &lt;div class="wy-nav-content"&gt;
+        
+        &lt;div class="rst-content"&gt;
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;div role="navigation" aria-label="breadcrumbs navigation"&gt;
+
+  &lt;ul class="wy-breadcrumbs"&gt;
+    
+      &lt;li&gt;&lt;a href="#"&gt;Docs&lt;/a&gt; &amp;raquo;&lt;/li&gt;
+        
+      &lt;li&gt;Robot Framework API documentation&lt;/li&gt;
+    
+    
+      &lt;li class="wy-breadcrumbs-aside"&gt;
+        
+            
+            
+              &lt;a href="https://github.com/robotframework/robotframework/blob/41513d0ce336de91753a5381bb888b01bd82b8a0/doc/api/index.rst" class="fa fa-github"&gt; Edit on GitHub&lt;/a&gt;
+            
+          
+        
+      &lt;/li&gt;
+    
+  &lt;/ul&gt;
+
+  
+  &lt;hr/&gt;
+&lt;/div&gt;
+          &lt;div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article"&gt;
+           &lt;div itemprop="articleBody"&gt;
+            
+  &lt;div class="section" id="robot-framework-api-documentation"&gt;
+&lt;h1&gt;Robot Framework API documentation&lt;a class="headerlink" href="#robot-framework-api-documentation" title="Permalink to this headline"&gt;Â¶&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;This documentation describes the public API of &lt;a class="reference external" href="http://robotframework.org"&gt;Robot Framework&lt;/a&gt;.
+Installation, basic usage and wealth of other topics are
+covered by the &lt;a class="reference external" href="http://robotframework.org/robotframework/#user-guide"&gt;Robot Framework User Guide&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Main API entry points are documented here, but the lower level
+implementation details are not always that well documented. If the
+documentation is insufficient, it is possible to view the source code
+by clicking &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;[source]&lt;/span&gt;&lt;/code&gt; link in the documentation. In case viewing the
+source is not helpful either, questions may be sent to the
+&lt;a class="reference external" href="http://groups.google.com/group/robotframework-users"&gt;robotframework-users&lt;/a&gt; mailing list.&lt;/p&gt;
+&lt;div class="toctree-wrapper compound"&gt;
+&lt;/div&gt;
+&lt;div class="section" id="entry-points"&gt;
+&lt;h2&gt;Entry points&lt;a class="headerlink" href="#entry-points" title="Permalink to this headline"&gt;Â¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Command line entry points are implemented as Python modules and they also
+provide programmatic APIs. Following entry points exist:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div&gt;&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference internal" href="autodoc/robot.html#module-robot.run" title="robot.run"&gt;&lt;code class="xref py py-mod docutils literal notranslate"&gt;&lt;span class="pre"&gt;robot.run&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; entry point for executing tests.&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference internal" href="autodoc/robot.html#module-robot.rebot" title="robot.rebot"&gt;&lt;code class="xref py py-mod docutils literal notranslate"&gt;&lt;span class="pre"&gt;robot.rebot&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; entry point for post-processing outputs (Rebot).&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference internal" href="autodoc/robot.html#module-robot.libdoc" title="robot.libdoc"&gt;&lt;code class="xref py py-mod docutils literal notranslate"&gt;&lt;span class="pre"&gt;robot.libdoc&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; entry point for Libdoc tool.&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference internal" href="autodoc/robot.html#module-robot.testdoc" title="robot.testdoc"&gt;&lt;code class="xref py py-mod docutils literal notranslate"&gt;&lt;span class="pre"&gt;robot.testdoc&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; entry point for Testdoc tool.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;p&gt;See &lt;a class="reference external" href="http://robotframework.org/robotframework/#built-in-tools"&gt;built-in tool documentation&lt;/a&gt; for more details about Rebot, Libdoc,
+and Testdoc tools.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="module-robot.api"&gt;
+&lt;span id="public-api"&gt;&lt;/span&gt;&lt;h2&gt;Public API&lt;a class="headerlink" href="#module-robot.api" title="Permalink to this headline"&gt;Â¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;a class="reference internal" href="#module-robot.api" title="robot.api"&gt;&lt;code class="xref py py-mod docutils literal notranslate"&gt;&lt;span class="pre"&gt;robot.api&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; package exposes the public APIs of Robot Framework.&lt;/p&gt;
+&lt;p&gt;Unless stated otherwise, the APIs exposed in this package are considered
+stable, and thus safe to use when building external tools on top of
+Robot Framework. Notice that all parsing APIs were rewritten in Robot
+Framework 3.2.&lt;/p&gt;
+&lt;p&gt;Currently exposed APIs are:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference internal" href="autodoc/robot.api.html#module-robot.api.logger" title="robot.api.logger"&gt;&lt;code class="xref py py-mod docutils literal notranslate"&gt;&lt;span cl... (set the log level to DEBUG or TRACE to see the full content) 
+ </msg>
+<msg timestamp="20220601 23:48:25.065" level="INFO">C:\Users\Artem Kozlov\PycharmProjects\RobotAPI\venv\lib\site-packages\urllib3\connectionpool.py:1043: InsecureRequestWarning: Unverified HTTPS request is being made to host 'robot-framework.readthedocs.io'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(
+C:\Users\Artem Kozlov\PycharmProjects\RobotAPI\venv\lib\site-packages\urllib3\connectionpool.py:1043: InsecureRequestWarning: Unverified HTTPS request is being made to host 'robot-framework.readthedocs.io'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg timestamp="20220601 23:48:25.081" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220601 23:48:24.535" endtime="20220601 23:48:25.081"/>
+</kw>
+<status status="PASS" starttime="20220601 23:48:24.535" endtime="20220601 23:48:25.081"/>
+</branch>
+<status status="PASS" starttime="20220601 23:48:24.535" endtime="20220601 23:48:25.081"/>
+</if>
+<kw name="Convert To String" library="BuiltIn">
+<var>${response_code}</var>
+<arg>${response.status_code}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20220601 23:48:25.081" level="INFO">${response_code} = 200</msg>
+<status status="PASS" starttime="20220601 23:48:25.081" endtime="20220601 23:48:25.081"/>
+</kw>
+<msg timestamp="20220601 23:48:25.081" level="INFO">${status_code} = 200</msg>
+<status status="PASS" starttime="20220601 23:48:24.535" endtime="20220601 23:48:25.081"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${status_code}</arg>
+<arg>200</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20220601 23:48:25.081" endtime="20220601 23:48:25.081"/>
+</kw>
+<status status="PASS" starttime="20220601 23:48:24.535" endtime="20220601 23:48:25.081"/>
+</kw>
+<doc>This test case verifies the ability to open the API Documentation Page</doc>
+<tag>APIDocumentation</tag>
+<tag>GET</tag>
+<status status="PASS" starttime="20220601 23:48:24.519" endtime="20220601 23:48:25.081"/>
+</test>
+<doc>Tast cases of API testing robotframework.org site</doc>
+<status status="PASS" starttime="20220601 23:48:24.160" endtime="20220601 23:48:25.081"/>
+</suite>
+<suite id="s1-s2" name="tests BasePages" source="C:\Users\Artem Kozlov\PycharmProjects\RobotAPI\Tests\tests_BasePages.robot">
+<kw name="Connect to base URL" library="keywords" type="SETUP">
+<kw name="Create Session" library="RequestsLibrary">
+<arg>NewSession</arg>
+<arg>${BASE_ENDPOINT}</arg>
+<arg>headers=${headers}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20220601 23:48:25.112" level="INFO">Creating Session using : alias=NewSession, url=https://robotframework.org, headers={'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.82 Safari/537.36', 'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20220601 23:48:25.112" endtime="20220601 23:48:25.112"/>
+</kw>
+<status status="PASS" starttime="20220601 23:48:25.112" endtime="20220601 23:48:25.112"/>
+</kw>
+<test id="s1-s2-t1" name="Get Home Page" line="8">
+<kw name="Verify that HomePage opens" library="keywords">
+<kw name="Get status code" library="keywords">
+<var>${status_code}</var>
+<if>
+<branch type="IF" condition="'${response}' == 'None'">
+<kw name="GET On Session" library="RequestsLibrary">
+<var>${response}</var>
+<arg>NewSession</arg>
+<arg>/</arg>
+<arg>headers=${headers}</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<msg timestamp="20220601 23:48:25.658" level="INFO">GET Request : url=https://robotframework.org/ 
+ path_url=/ 
+ headers={'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.82 Safari/537.36', 'Accept-Encoding': 'gzip, deflate', 'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg timestamp="20220601 23:48:25.658" level="INFO">GET Response : url=https://robotframework.org/ 
+ status=200, reason=OK 
+ headers={'Connection': 'keep-alive', 'Content-Length': '1471', 'Server': 'GitHub.com', 'Content-Type': 'text/html; charset=utf-8', 'Last-Modified': 'Wed, 01 Jun 2022 00:32:03 GMT', 'Access-Control-Allow-Origin': '*', 'ETag': 'W/"6296b383-e2f"', 'expires': 'Wed, 01 Jun 2022 05:29:04 GMT', 'Cache-Control': 'max-age=600', 'Content-Encoding': 'gzip', 'x-proxy-cache': 'MISS', 'X-GitHub-Request-Id': 'C854:6610:24A1C3:277DB1:6296F6C8', 'Accept-Ranges': 'bytes', 'Date': 'Wed, 01 Jun 2022 16:48:25 GMT', 'Via': '1.1 varnish', 'Age': '52', 'X-Served-By': 'cache-hhn4032-HHN', 'X-Cache': 'HIT', 'X-Cache-Hits': '1', 'X-Timer': 'S1654102105.255279,VS0,VE1', 'Vary': 'Accept-Encoding', 'X-Fastly-Request-ID': 'e2c42268ed7ba160081b2a8c52ad4eadc6226057'} 
+ body=&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;&lt;meta charset="utf-8"&gt;&lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;&lt;meta name="viewport" content="width=device-width,initial-scale=1"&gt;&lt;title&gt;Robot Framework&lt;/title&gt;&lt;meta name="description" content="Generic open source automation framework for acceptance testing, acceptance test driven development (ATDD), and robotic process automation (RPA)."&gt;&lt;!--[if IE]&gt;&lt;link rel="icon" href="/favicon.ico"&gt;&lt;![endif]--&gt;&lt;script defer data-domain="robotframework.org" src="https://plausible.io/js/plausible.outbound-links.js"&gt;&lt;/script&gt;&lt;script&gt;window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }&lt;/script&gt;&lt;script&gt;// Single Page Apps for GitHub Pages
+      // MIT License
+      // https://github.com/rafgraph/spa-github-pages
+      // This script checks to see if a redirect is present in the query string,
+      // converts it back into the correct url and adds it to the
+      // browser's history using window.history.replaceState(...),
+      // which won't cause the browser to attempt to load the new url.
+      // When the single page app is loaded further down in this file,
+      // the correct url will be waiting in the browser's history for
+      // the single page app to route accordingly.
+      (function(l) {
+        if (l.search[1] === '/' ) {
+          var decoded = l.search.slice(1).split('&amp;').map(function(s) { 
+            return s.replace(/~and~/g, '&amp;')
+          }).join('?');
+          window.history.replaceState(null, null,
+              l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      }(window.location))&lt;/script&gt;&lt;link href="/css/chunk-f73cff1e.28289fc0.css" rel="prefetch"&gt;&lt;link href="/js/chunk-2d0aab07.5a6f3540.js" rel="prefetch"&gt;&lt;link href="/js/chunk-2d0c1ed0.ec30c66b.js" rel="prefetch"&gt;&lt;link href="/js/chunk-2d0c512b.fc5c2f78.js" rel="prefetch"&gt;&lt;link href="/js/chunk-2d0d0645.d864beef.js" rel="prefetch"&gt;&lt;link href="/js/chunk-2d20ff23.09b985f3.js" rel="prefetch"&gt;&lt;link href="/js/chunk-2d22502a.bcf98569.js" rel="prefetch"&gt;&lt;link href="/js/chunk-2d22c2b8.5f002531.js" rel="prefetch"&gt;&lt;link href="/js/chunk-2d22ca58.a71fd949.js" rel="prefetch"&gt;&lt;link href="/js/chunk-2d2371be.c3e14d63.js" rel="prefetch"&gt;&lt;link href="/js/chunk-7532b3ea.7e881d12.js" rel="prefetch"&gt;&lt;link href="/js/chunk-f73cff1e.98d55f47.js" rel="prefetch"&gt;&lt;link href="/css/app.11350708.css" rel="preload" as="style"&gt;&lt;link href="/js/app.20450c80.js" rel="preload" as="script"&gt;&lt;link href="/js/chunk-vendors.bc1cb612.js" rel="preload" as="script"&gt;&lt;link href="/css/app.11350708.css" rel="stylesheet"&gt;&lt;link rel="icon" type="image/png" sizes="32x32" href="/img/icons/favicon-32x32.png"&gt;&lt;link rel="icon" type="image/png" sizes="16x16" href="/img/icons/favicon-16x16.png"&gt;&lt;link rel="manifest" href="/manifest.json"&gt;&lt;meta name="theme-color" content="#4DBA87"&gt;&lt;meta name="apple-mobile-web-app-capable" content="no"&gt;&lt;meta name="apple-mobile-web-app-status-bar-style" content="default"&gt;&lt;meta name="apple-mobile-web-app-title" content="robot-framework"&gt;&lt;link rel="apple-touch-icon" href="/img/icons/apple-touch-icon-152x152.png"&gt;&lt;link rel="mask-icon" href="/img/icons/safari-pinned-tab.svg" color="#4DBA87"&gt;&lt;meta name="msapplication-TileImage" content="/img/icons/msapplication-icon-144x144.png"&gt;&lt;meta name="msapplication-TileColor" content="#000000"&gt;&lt;/head&gt;&lt;body&gt;&lt;noscript&gt;&lt;strong&gt;We're sorry but robot-framework doesn't work properly without JavaScript enabled. Please enable it to continue.&lt;/strong&gt;&lt;/noscript&gt;&lt;div id="app"&gt;&lt;/div&gt;&lt;script src="/js/chunk-vendors.bc1cb612.js"&gt;&lt;/script&gt;&lt;script src="/js/app.20450c80.js"&gt;&lt;/script&gt;&lt;/body&gt;&lt;/html&gt; 
+ </msg>
+<msg timestamp="20220601 23:48:25.658" level="INFO">C:\Users\Artem Kozlov\PycharmProjects\RobotAPI\venv\lib\site-packages\urllib3\connectionpool.py:1043: InsecureRequestWarning: Unverified HTTPS request is being made to host 'robotframework.org'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg timestamp="20220601 23:48:25.658" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220601 23:48:25.112" endtime="20220601 23:48:25.658"/>
+</kw>
+<status status="PASS" starttime="20220601 23:48:25.112" endtime="20220601 23:48:25.658"/>
+</branch>
+<status status="PASS" starttime="20220601 23:48:25.112" endtime="20220601 23:48:25.658"/>
+</if>
+<kw name="Convert To String" library="BuiltIn">
+<var>${response_code}</var>
+<arg>${response.status_code}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20220601 23:48:25.673" level="INFO">${response_code} = 200</msg>
+<status status="PASS" starttime="20220601 23:48:25.658" endtime="20220601 23:48:25.673"/>
+</kw>
+<msg timestamp="20220601 23:48:25.673" level="INFO">${status_code} = 200</msg>
+<status status="PASS" starttime="20220601 23:48:25.112" endtime="20220601 23:48:25.673"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${status_code}</arg>
+<arg>200</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20220601 23:48:25.673" endtime="20220601 23:48:25.689"/>
+</kw>
+<status status="PASS" starttime="20220601 23:48:25.112" endtime="20220601 23:48:25.689"/>
+</kw>
+<doc>This test case verifies the ability to open the HomePage</doc>
+<tag>GET</tag>
+<tag>HomePage</tag>
+<status status="PASS" starttime="20220601 23:48:25.112" endtime="20220601 23:48:25.689"/>
+</test>
+<test id="s1-s2-t2" name="Get Documentation Page" line="14">
+<kw name="Verify that DocumentationPage opens" library="keywords">
+<kw name="Get documentation page response" library="keywords">
+<var>${response}</var>
+<kw name="GET On Session" library="RequestsLibrary">
+<var>${response}</var>
+<arg>NewSession</arg>
+<arg>robotframework</arg>
+<arg>headers=${headers}</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<msg timestamp="20220601 23:48:26.079" level="INFO">GET Request : url=https://robotframework.org/robotframework (redirected) 
+ path_url=/robotframework 
+ headers={'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.82 Safari/537.36', 'Accept-Encoding': 'gzip, deflate', 'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg timestamp="20220601 23:48:26.079" level="INFO">GET Response : url=https://robotframework.org/robotframework/ 
+ status=200, reason=OK 
+ headers={'Connection': 'keep-alive', 'Content-Length': '3390', 'Server': 'GitHub.com', 'Content-Type': 'text/html; charset=utf-8', 'Last-Modified': 'Wed, 23 Mar 2022 16:18:39 GMT', 'Access-Control-Allow-Origin': '*', 'ETag': 'W/"623b485f-ab95"', 'expires': 'Wed, 01 Jun 2022 00:55:59 GMT', 'Cache-Control': 'max-age=600', 'Content-Encoding': 'gzip', 'x-proxy-cache': 'MISS', 'X-GitHub-Request-Id': '6B0A:B661:6B790E:70516D:6296B6C7', 'Accept-Ranges': 'bytes', 'Date': 'Wed, 01 Jun 2022 16:48:25 GMT', 'Via': '1.1 varnish', 'Age': '0', 'X-Served-By': 'cache-hhn4032-HHN', 'X-Cache': 'HIT', 'X-Cache-Hits': '1', 'X-Timer': 'S1654102106.586943,VS0,VE87', 'Vary': 'Accept-Encoding', 'X-Fastly-Request-ID': '435a82bf50855e025ba02a32d803653804703af8'} 
+ body=&lt;!doctype html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;script defer data-domain="robotframework.org" src="https://plausible.io/js/plausible.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+      window.addEventListener("hashchange", ({ oldURL, newURL }) =&gt; {
+          plausible(`Anchor click - ${document.title}`, { props: { to: window.location.hash.replaceAll("%20", " ") } })
+      }, false)
+    &lt;/script&gt;
+    &lt;title&gt;Robot Framework documentation&lt;/title&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;link rel="stylesheet" href="resources/reset.css"&gt;
+    &lt;link rel="stylesheet" href="resources/docs.css"&gt;
+    &lt;script src="resources/docs.js"&gt;&lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div&gt;
+    &lt;h1&gt;Robot Framework documentation&lt;/h1&gt;
+    &lt;p&gt;
+      This page contains links to version specific Robot Framework
+      User Guide, standard library, and built-in tool documentation.
+      See &lt;a href="http://robotframework.org"&gt;http://robotframework.org&lt;/a&gt;
+      and &lt;a href="https://github.com/robotframework/robotframework"&gt;GitHub
+      project pages&lt;/a&gt; for more information about the framework and
+      the rich ecosystem around it in general.
+    &lt;/p&gt;
+    &lt;h2 id="user-guide"&gt;
+      &lt;a href="#user-guide" title="Permalink to this heading."&gt;User Guide&lt;/a&gt;
+    &lt;/h2&gt;
+    &lt;p&gt;
+      Robot Framework User Guide is a reference manual explaining
+      all Robot Framework features in detail. You can either
+      &lt;code&gt;View&lt;/code&gt; the selected version online or
+      &lt;code&gt;Download&lt;/code&gt; it as a zip package. This package
+      contains also standard library documentation
+      under &lt;i&gt;libraries&lt;/i&gt; directory.
+    &lt;/p&gt;
+    &lt;div class="user-guide"&gt;
+    &lt;select name="ug" id="ug"&gt;
+      &lt;option value="latest" selected="selected"&gt;Latest&lt;/option&gt;
+      &lt;option value="5.0"&gt;5.0&lt;/option&gt;
+      &lt;option value="4.1.3"&gt;4.1.3&lt;/option&gt;
+      &lt;option value="4.1.2"&gt;4.1.2&lt;/option&gt;
+      &lt;option value="4.1.1"&gt;4.1.1&lt;/option&gt;
+      &lt;option value="4.1"&gt;4.1&lt;/option&gt;
+      &lt;option value="4.0.3"&gt;4.0.3&lt;/option&gt;
+      &lt;option value="4.0.2"&gt;4.0.2&lt;/option&gt;
+      &lt;option value="4.0.1"&gt;4.0.1&lt;/option&gt;
+      &lt;option value="4.0"&gt;4.0&lt;/option&gt;
+      &lt;option value="3.2.2"&gt;3.2.2&lt;/option&gt;
+      &lt;option value="3.2.1"&gt;3.2.1&lt;/option&gt;
+      &lt;option value="3.2"&gt;3.2&lt;/option&gt;
+      &lt;option value="3.1.2"&gt;3.1.2&lt;/option&gt;
+      &lt;option value="3.1.1"&gt;3.1.1&lt;/option&gt;
+      &lt;option value="3.1"&gt;3.1&lt;/option&gt;
+      &lt;option value="3.0.4"&gt;3.0.4&lt;/option&gt;
+      &lt;option value="3.0.3"&gt;3.0.3&lt;/option&gt;
+      &lt;option value="3.0.2"&gt;3.0.2&lt;/option&gt;
+      &lt;option value="3.0.1"&gt;3.0.1&lt;/option&gt;
+      &lt;option value="3.0"&gt;3.0&lt;/option&gt;
+      &lt;option value="2.9.2"&gt;2.9.2&lt;/option&gt;
+      &lt;option value="2.9.1"&gt;2.9.1&lt;/option&gt;
+      &lt;option value="2.9"&gt;2.9&lt;/option&gt;
+      &lt;option value="2.8.7"&gt;2.8.7&lt;/option&gt;
+      &lt;option value="2.8.6"&gt;2.8.6&lt;/option&gt;
+      &lt;option value="2.8.5"&gt;2.8.5&lt;/option&gt;
+      &lt;option value="2.8.4"&gt;2.8.4&lt;/option&gt;
+      &lt;option value="2.8.3"&gt;2.8.3&lt;/option&gt;
+      &lt;option value="2.8.2"&gt;2.8.2&lt;/option&gt;
+      &lt;option value="2.8.1"&gt;2.8.1&lt;/option&gt;
+      &lt;option value="2.8"&gt;2.8&lt;/option&gt;
+      &lt;option value="2.7.7"&gt;2.7.7&lt;/option&gt;
+      &lt;option value="2.7.6"&gt;2.7.6&lt;/option&gt;
+      &lt;option value="2.7.5"&gt;2.7.5&lt;/option&gt;
+      &lt;option value="2.7.4"&gt;2.7.4&lt;/option&gt;
+      &lt;option value="2.7.3"&gt;2.7.3&lt;/option&gt;
+      &lt;option value="2.7.2"&gt;2.7.2&lt;/option&gt;
+      &lt;option value="2.7.1"&gt;2.7.1&lt;/option&gt;
+      &lt;option value="2.7"&gt;2.7&lt;/option&gt;
+      &lt;option value="2.6.3"&gt;2.6.3&lt;/option&gt;
+      &lt;option value="2.6.2"&gt;2.6.2&lt;/option&gt;
+      &lt;option value="2.6.1"&gt;2.6.1&lt;/option&gt;
+      &lt;option value="2.6"&gt;2.6&lt;/option&gt;
+      &lt;option value="2.5.7"&gt;2.5.7&lt;/option&gt;
+      &lt;option value="2.5.6"&gt;2.5.6&lt;/option&gt;
+      &lt;option value="2.5.5"&gt;2.5.5&lt;/option&gt;
+      &lt;option value="2.5.4"&gt;2.5.4&lt;/option&gt;
+      &lt;option value="2.5.3"&gt;2.5.3&lt;/option&gt;
+      &lt;option value="2.5.2"&gt;2.5.2&lt;/option&gt;
+      &lt;option value="2.5.1"&gt;2.5.1&lt;/option&gt;
+      &lt;option value="2.5"&gt;2.5&lt;/option&gt;
+      &lt;option value="2.1.3"&gt;2.1.3&lt;/option&gt;
+      &lt;option value="2.1.2"&gt;2.1.2&lt;/option&gt;
+      &lt;option value="2.1.1"&gt;2.1.1&lt;/option&gt;
+      &lt;option value="2.1"&gt;2.1&lt;/option&gt;
+      &lt;option value="2.0.4"&gt;2.0.4&lt;/option&gt;
+      &lt;option value="2.0.3"&gt;2.0.3&lt;/option&gt;
+      &lt;option value="2.0.2"&gt;2.0.2&lt;/option&gt;
+      &lt;option value="2.0.1"&gt;2.0.1&lt;/option&gt;
+      &lt;option value="2.0"&gt;2.0&lt;/option&gt;
+    &lt;/select&gt;
+    &lt;button class="view-doc" value="ug"&gt;View&lt;/button&gt;
+    &lt;button class="download-doc" value="ug"&gt;Download&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;h2 id="standard-libraries"&gt;
+      &lt;a href="#standard-libraries" title="Permalink to this heading."&gt;Standard libraries&lt;/a&gt;
+    &lt;/h2&gt;
+    &lt;p&gt;
+      These test libraries are distributed with Robot Framework.
+      Click &lt;code&gt;View&lt;/code&gt; to view the selected version online,
+      and use &lt;code&gt;Ctrl-S&lt;/code&gt; or equivalent to save the opened page
+      locally if needed
+    &lt;/p&gt;
+    &lt;p&gt;
+      New standard libraries are added time to time. Dropdown menus
+      list versions in which libraries are available.
+    &lt;/p&gt;
+    &lt;table&gt;
+      &lt;tr&gt;&lt;th&gt;Library&lt;/th&gt;&lt;th&gt;Documentation&lt;/th&gt;&lt;th&gt;Introduction&lt;/th&gt;&lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;BuiltIn&lt;/td&gt;
+        &lt;td&gt;
+          &lt;select name="BuiltIn" id="BuiltIn"&gt;
+            &lt;option value="latest" selected="selected"&gt;Latest&lt;/option&gt;
+            &lt;option value="5.0"&gt;5.0&lt;/option&gt;
+            &lt;option value="4.1.3"&gt;4.1.3&lt;/option&gt;
+            &lt;option value="4.1.2"&gt;4.1.2&lt;/option&gt;
+            &lt;option value="4.1.1"&gt;4.1.1&lt;/option&gt;
+            &lt;option value="4.1"&gt;4.1&lt;/option&gt;
+            &lt;option value="4.0.3"&gt;4.0.3&lt;/option&gt;
+            &lt;option value="4.0.2"&gt;4.0.2&lt;/option&gt;
+            &lt;option value="4.0.1"&gt;4.0.1&lt;/option&gt;
+            &lt;option value="4.0"&gt;4.0&lt;/option&gt;
+            &lt;option value="3.2.2"&gt;3.2.2&lt;/option&gt;
+            &lt;option value="3.2.1"&gt;3.2.1&lt;/option&gt;
+            &lt;option value="3.2"&gt;3.2&lt;/option&gt;
+            &lt;option value="3.1.2"&gt;3.1.2&lt;/option&gt;
+            &lt;option value="3.1.1"&gt;3.1.1&lt;/option&gt;
+            &lt;option value="3.1"&gt;3.1&lt;/option&gt;
+            &lt;option value="3.0.4"&gt;3.0.4&lt;/option&gt;
+            &lt;option value="3.0.3"&gt;3.0.3&lt;/option&gt;
+            &lt;option value="3.0.2"&gt;3.0.2&lt;/option&gt;
+            &lt;option value="3.0.1"&gt;3.0.1&lt;/option&gt;
+            &lt;option value="3.0"&gt;3.0&lt;/option&gt;
+            &lt;option value="2.9.2"&gt;2.9.2&lt;/option&gt;
+            &lt;option value="2.9.1"&gt;2.9.1&lt;/option&gt;
+            &lt;option value="2.9"&gt;2.9&lt;/option&gt;
+            &lt;option value="2.8.7"&gt;2.8.7&lt;/option&gt;
+            &lt;option value="2.8.6"&gt;2.8.6&lt;/option&gt;
+            &lt;option value="2.8.5"&gt;2.8.5&lt;/option&gt;
+            &lt;option value="2.8.4"&gt;2.8.4&lt;/option&gt;
+            &lt;option value="2.8.3"&gt;2.8.3&lt;/option&gt;
+            &lt;option value="2.8.2"&gt;2.8.2&lt;/option&gt;
+            &lt;option value="2.8.1"&gt;2.8.1&lt;/option&gt;
+            &lt;option value="2.8"&gt;2.8&lt;/option&gt;
+            &lt;option value="2.7.7"&gt;2.7.7&lt;/option&gt;
+            &lt;option value="2.7.6"&gt;2.7.6&lt;/option&gt;
+            &lt;option value="2.7.5"&gt;2.7.5&lt;/option&gt;
+            &lt;option value="2.7.4"&gt;2.7.4&lt;/option&gt;
+            &lt;option value="2.7.3"&gt;2.7.3&lt;/option&gt;
+            &lt;option value="2.7.2"&gt;2.7.2&lt;/option&gt;
+            &lt;option value="2.7.1"&gt;2.7.1&lt;/option&gt;
+            &lt;option value="2.7"&gt;2.7&lt;/option&gt;
+            &lt;option value="2.6.3"&gt;2.6.3&lt;/option&gt;
+            &lt;option value="2.6.2"&gt;2.6.2&lt;/option&gt;
+            &lt;option value="2.6.1"&gt;2.6.1&lt;/option&gt;
+            &lt;option value="2.6"&gt;2.6&lt;/option&gt;
+            &lt;option value="2.5.7"&gt;2.5.7&lt;/option&gt;
+            &lt;option value="2.5.6"&gt;2.5.6&lt;/option&gt;
+            &lt;option value="2.5.5"&gt;2.5.5&lt;/option&gt;
+            &lt;option value="2.5.4"&gt;2.5.4&lt;/option&gt;
+            &lt;option value="2.5.3"&gt;2.5.3&lt;/option&gt;
+            &lt;option value="2.5.2"&gt;2.5.2&lt;/option&gt;
+            &lt;option value="2.5.1"&gt;2.5.1&lt;/option&gt;
+            &lt;option value="2.5"&gt;2.5&lt;/option&gt;
+            &lt;option value="2.1.3"&gt;2.1.3&lt;/option&gt;
+            &lt;option value="2.1.2"&gt;2.1.2&lt;/option&gt;
+            &lt;option value="2.1.1"&gt;2.1.1&lt;/option&gt;
+            &lt;option value="2.1"&gt;2.1&lt;/option&gt;
+            &lt;option value="2.0.4"&gt;2.0.4&lt;/option&gt;
+            &lt;option value="2.0.3"&gt;2.0.3&lt;/option&gt;
+            &lt;option value="2.0.2"&gt;2.0.2&lt;/option&gt;
+            &lt;option value="2.0.1"&gt;2.0.1&lt;/option&gt;
+            &lt;option value="2.0"&gt;2.0&lt;/option&gt;
+          &lt;/select&gt;
+          &lt;button class="view-doc" value="BuiltIn"&gt;View&lt;/button&gt;
+        &lt;/td&gt;
+        &lt;td&gt;
+          Contains generic often needed keywords. Imported
+          automatically and thus always available.
+        &lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;Collections&lt;/td&gt;
+        &lt;td&gt;
+          &lt;select name="Collections" id="Collections"&gt;
+            &lt;option value="latest" selected="selected"&gt;Latest&lt;/option&gt;
+            &lt;option value="5.0"&gt;5.0&lt;/option&gt;
+            &lt;option value="4.1.3"&gt;4.1.3&lt;/option&gt;
+            &lt;option value="4.1.2"&gt;4.1.2&lt;/option&gt;
+            &lt;option value="4.1.1"&gt;4.1.1&lt;/option&gt;
+            &lt;option value="4.1"&gt;4.1&lt;/option&gt;
+            &lt;option value="4.0.3"&gt;4.0.3&lt;/option&gt;
+            &lt;option value="4.0.2"&gt;4.0.2&lt;/option&gt;
+            &lt;option value="4.0.1"&gt;4.0.1&lt;/option&gt;
+            &lt;option value="4.0"&gt;4.0&lt;/option&gt;
+            &lt;option value="3.2.2"&gt;3.2.2&lt;/option&gt;
+            &lt;option value="3.2.1"&gt;3.2.1&lt;/option&gt;
+            &lt;option value="3.2"&gt;3.2&lt;/option&gt;
+            &lt;option value="3.1.2"&gt;3.1.2&lt;/option&gt;
+            &lt;option value="3.1.1"&gt;3.1.1&lt;/option&gt;
+            &lt;option value="3.1"&gt;3.1&lt;/option&gt;
+            &lt;option value="3.0.4"&gt;3.0.4&lt;/option&gt;
+            &lt;option value="3.0.3"&gt;3.0.3&lt;/option&gt;
+            &lt;option value="3.0.2"&gt;3.0.2&lt;/option&gt;
+            &lt;option value="3.0.1"&gt;3.0.1&lt;/option&gt;
+            &lt;option value="3.0"&gt;3.0&lt;/option&gt;
+            &lt;option value="2.9.2"&gt;2.9.2&lt;/option&gt;
+            &lt;option value="2.9.1"&gt;2.9.1&lt;/option&gt;
+            &lt;option value="2.9"&gt;2.9&lt;/option&gt;
+            &lt;option value="2.8.7"&gt;2.8.7&lt;/option&gt;
+            &lt;option value="2.8.6"&gt;2.8.6&lt;/option&gt;
+            &lt;option value="2.8.5"&gt;2.8.5&lt;/option&gt;
+            &lt;option value="2.8.4"&gt;2.8.4&lt;/option&gt;
+            &lt;option value="2.8.3"&gt;2.8.3&lt;/option&gt;
+            &lt;option value="2.8.2"&gt;2.8.2&lt;/option&gt;
+            &lt;option value="2.8.1"&gt;2.8.1&lt;/option&gt;
+            &lt;option value="2.8"&gt;2.8&lt;/option&gt;
+            &lt;option value="2.7.7"&gt;2.7.7&lt;/option&gt;
+            &lt;option va... (set the log level to DEBUG or TRACE to see the full content) 
+ </msg>
+<msg timestamp="20220601 23:48:26.079" level="INFO">C:\Users\Artem Kozlov\PycharmProjects\RobotAPI\venv\lib\site-packages\urllib3\connectionpool.py:1043: InsecureRequestWarning: Unverified HTTPS request is being made to host 'robotframework.org'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(
+C:\Users\Artem Kozlov\PycharmProjects\RobotAPI\venv\lib\site-packages\urllib3\connectionpool.py:1043: InsecureRequestWarning: Unverified HTTPS request is being made to host 'robotframework.org'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg timestamp="20220601 23:48:26.079" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220601 23:48:25.689" endtime="20220601 23:48:26.079"/>
+</kw>
+<msg timestamp="20220601 23:48:26.079" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220601 23:48:25.689" endtime="20220601 23:48:26.079"/>
+</kw>
+<kw name="Get status code" library="keywords">
+<var>${status_code}</var>
+<arg>${response}</arg>
+<if>
+<branch type="IF" condition="'${response}' == 'None'">
+<kw name="GET On Session" library="RequestsLibrary">
+<var>${response}</var>
+<arg>NewSession</arg>
+<arg>/</arg>
+<arg>headers=${headers}</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="NOT RUN" starttime="20220601 23:48:26.095" endtime="20220601 23:48:26.095"/>
+</kw>
+<status status="NOT RUN" starttime="20220601 23:48:26.079" endtime="20220601 23:48:26.095"/>
+</branch>
+<status status="PASS" starttime="20220601 23:48:26.079" endtime="20220601 23:48:26.095"/>
+</if>
+<kw name="Convert To String" library="BuiltIn">
+<var>${response_code}</var>
+<arg>${response.status_code}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20220601 23:48:26.095" level="INFO">${response_code} = 200</msg>
+<status status="PASS" starttime="20220601 23:48:26.095" endtime="20220601 23:48:26.095"/>
+</kw>
+<msg timestamp="20220601 23:48:26.095" level="INFO">${status_code} = 200</msg>
+<status status="PASS" starttime="20220601 23:48:26.079" endtime="20220601 23:48:26.095"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${status_code}</arg>
+<arg>200</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20220601 23:48:26.095" endtime="20220601 23:48:26.095"/>
+</kw>
+<status status="PASS" starttime="20220601 23:48:25.689" endtime="20220601 23:48:26.095"/>
+</kw>
+<doc>This test case verifies the ability to open the Documentation page</doc>
+<tag>DocumentationPage</tag>
+<tag>GET</tag>
+<status status="PASS" starttime="20220601 23:48:25.689" endtime="20220601 23:48:26.110"/>
+</test>
+<test id="s1-s2-t3" name="Get resources of documentation Page" line="20">
+<kw name="Verify that resources of documentation loads correctly" library="keywords">
+<kw name="Get resources/docs.js file" library="keywords">
+<var>${response}</var>
+<kw name="GET On Session" library="RequestsLibrary">
+<var>${response}</var>
+<arg>NewSession</arg>
+<arg>robotframework/resources/docs.js</arg>
+<arg>headers=${headers}</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<msg timestamp="20220601 23:48:26.204" level="INFO">GET Request : url=https://robotframework.org/robotframework/resources/docs.js 
+ path_url=/robotframework/resources/docs.js 
+ headers={'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.82 Safari/537.36', 'Accept-Encoding': 'gzip, deflate', 'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg timestamp="20220601 23:48:26.219" level="INFO">GET Response : url=https://robotframework.org/robotframework/resources/docs.js 
+ status=200, reason=OK 
+ headers={'Connection': 'keep-alive', 'Content-Length': '615', 'Server': 'GitHub.com', 'Content-Type': 'application/javascript; charset=utf-8', 'Last-Modified': 'Wed, 23 Mar 2022 16:18:39 GMT', 'Access-Control-Allow-Origin': '*', 'ETag': 'W/"623b485f-737"', 'expires': 'Wed, 01 Jun 2022 05:35:16 GMT', 'Cache-Control': 'max-age=600', 'Content-Encoding': 'gzip', 'x-proxy-cache': 'MISS', 'X-GitHub-Request-Id': 'C694:A890:2EEE91:314957:6296F83C', 'Accept-Ranges': 'bytes', 'Date': 'Wed, 01 Jun 2022 16:48:25 GMT', 'Via': '1.1 varnish', 'Age': '216', 'X-Served-By': 'cache-hhn4032-HHN', 'X-Cache': 'HIT', 'X-Cache-Hits': '1', 'X-Timer': 'S1654102106.810843,VS0,VE1', 'Vary': 'Accept-Encoding', 'X-Fastly-Request-ID': 'e9a6a442d173167447b5402515ac7a49e0d0f775'} 
+ body=function addHandler(element, eventName, handler) {
+    if (element.attachEvent) {
+        return element.attachEvent('on' + eventName, handler);
+    } else {
+        return element.addEventListener(eventName, handler, false);
+    }
+}
+
+function addHandlerToButtons(className, handler) {
+    var buttons = getElementsByClassName(className);
+    for (var i = buttons.length - 1; i &gt;= 0; i--) {
+        addHandler(buttons[i], 'click', handler);
+    }
+}
+
+function getElementsByClassName(className) {
+    if (document.getElementsByClassName) {
+        return document.getElementsByClassName(className);
+    } else {  // IE8
+        return document.querySelectorAll('.' + className);
+    }
+}
+
+function getIdAndVersion(evt) {
+    var targetElement = (evt.srcElement) ? evt.srcElement : evt.currentTarget;
+    var id = targetElement.value;
+    return {
+        'id' : id,
+        'version' : document.getElementById(id).value
+    };
+}
+
+function getViewUrl(targetId, targetVersion) {
+    if (targetId === 'ug') {
+        return targetVersion + '/RobotFrameworkUserGuide.html';
+    }
+    return targetVersion + '/libraries/' + targetId + '.html';
+}
+
+function getZipUrl(version) {
+    return 'robotframework-userguide-' + version + '.zip'
+}
+
+function viewDoc(event) {
+    var target = getIdAndVersion(event);
+    window.location.href = getViewUrl(target.id, target.version);
+}
+
+function downloadDoc(event) {
+    var target = getIdAndVersion(event);
+    window.location.href = getZipUrl(target.version);
+}
+
+function viewTool(event) {
+    var target = getIdAndVersion(event);
+    var ugUrl = getViewUrl('ug', target.version);
+    window.location.href = ugUrl + '#' + target.id;
+}
+
+window.onload = function() {
+    addHandlerToButtons('download-doc', downloadDoc);
+    addHandlerToButtons('view-doc', viewDoc);
+    addHandlerToButtons('view-tool', viewTool);
+};
+ 
+ </msg>
+<msg timestamp="20220601 23:48:26.219" level="INFO">C:\Users\Artem Kozlov\PycharmProjects\RobotAPI\venv\lib\site-packages\urllib3\connectionpool.py:1043: InsecureRequestWarning: Unverified HTTPS request is being made to host 'robotframework.org'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg timestamp="20220601 23:48:26.219" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220601 23:48:26.110" endtime="20220601 23:48:26.219"/>
+</kw>
+<msg timestamp="20220601 23:48:26.219" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20220601 23:48:26.110" endtime="20220601 23:48:26.219"/>
+</kw>
+<kw name="Get status code" library="keywords">
+<var>${status_code}</var>
+<arg>${response}</arg>
+<if>
+<branch type="IF" condition="'${response}' == 'None'">
+<kw name="GET On Session" library="RequestsLibrary">
+<var>${response}</var>
+<arg>NewSession</arg>
+<arg>/</arg>
+<arg>headers=${headers}</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="NOT RUN" starttime="20220601 23:48:26.235" endtime="20220601 23:48:26.235"/>
+</kw>
+<status status="NOT RUN" starttime="20220601 23:48:26.235" endtime="20220601 23:48:26.235"/>
+</branch>
+<status status="PASS" starttime="20220601 23:48:26.219" endtime="20220601 23:48:26.235"/>
+</if>
+<kw name="Convert To String" library="BuiltIn">
+<var>${response_code}</var>
+<arg>${response.status_code}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20220601 23:48:26.235" level="INFO">${response_code} = 200</msg>
+<status status="PASS" starttime="20220601 23:48:26.235" endtime="20220601 23:48:26.235"/>
+</kw>
+<msg timestamp="20220601 23:48:26.235" level="INFO">${status_code} = 200</msg>
+<status status="PASS" starttime="20220601 23:48:26.219" endtime="20220601 23:48:26.235"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${status_code}</arg>
+<arg>200</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20220601 23:48:26.235" endtime="20220601 23:48:26.235"/>
+</kw>
+<status status="PASS" starttime="20220601 23:48:26.110" endtime="20220601 23:48:26.235"/>
+</kw>
+<doc>This test case verifies that robotframework/resources/docs.js loads correctly in the Documentation page.
+This file allows a user interact with 'View' and 'Download' buttons.</doc>
+<tag>DocumentationPage</tag>
+<tag>GET</tag>
+<status status="PASS" starttime="20220601 23:48:26.110" endtime="20220601 23:48:26.251"/>
+</test>
+<doc>Tast cases of API testing robotframework.org site</doc>
+<status status="PASS" starttime="20220601 23:48:25.096" endtime="20220601 23:48:26.251"/>
+</suite>
+<status status="PASS" starttime="20220601 23:48:24.067" endtime="20220601 23:48:26.266"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">APIDocumentation</stat>
+<stat pass="2" fail="0" skip="0">DocumentationPage</stat>
+<stat pass="4" fail="0" skip="0">GET</stat>
+<stat pass="1" fail="0" skip="0">HomePage</stat>
+</tag>
+<suite>
+<stat pass="4" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="tests APIDocumentation">Tests.tests APIDocumentation</stat>
+<stat pass="3" fail="0" skip="0" id="s1-s2" name="tests BasePages">Tests.tests BasePages</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
