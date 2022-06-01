@@ -2,6 +2,8 @@
 
 This is a repo of API testing using RobotFramework.
 
+My GitHub account: https://github.com/kozlovartemq/
+
 # Files
 
 **/Resources**
