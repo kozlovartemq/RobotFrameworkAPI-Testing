@@ -1,4 +1,4 @@
-# Introdaction
+# Introduction
 
 This is a repo of API testing using RobotFramework.
 
@@ -14,7 +14,7 @@ My GitHub account: https://github.com/kozlovartemq/
 - output.xml
 - report.html
 
-**/Tests** – a directory that contains tast cases.
+**/Tests** – a directory that contains test cases.
 - tests_APIDocumentation.robot
 - tests_BasePages.robot
 
